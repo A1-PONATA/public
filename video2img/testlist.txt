@@ -1,0 +1,11 @@
+fastpass/fp_005 1
+fastpass/fp_008 1
+fastpass/fp_019 1
+fastpass/fp_015 1
+right2left/rl_010 3
+right2left/rl_014 3
+right2left/rl_012 3
+right2left/rl_006 3
+left2right/LR_008 2
+left2right/LR_002 2
+left2right/LR_017 2
