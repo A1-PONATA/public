@@ -42,7 +42,7 @@ def gstreamer_pipeline(
     )
 
 
-def face_detect():
+def faceDetect():
     face_cascade = cv2.CascadeClassifier(
         "/usr/share/OpenCV/haarcascades/haarcascade_frontalface_default.xml"
     )
@@ -80,4 +80,4 @@ def face_detect():
 
 
 if __name__ == "__main__":
-    face_detect()
+    faceDetect()
