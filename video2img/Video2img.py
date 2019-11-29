@@ -2,19 +2,18 @@ import cv2
 import os
 
 video_path = '/home/pirl/img/'
-save_path = '/home/pirl/img3/'
+save_path = '/home/pirl/img34/'
 
 action_list = os.listdir(video_path)
+
 for action in action_list:
     if not os.path.exists(save_path+action+'/'):
         os.mkdir(save_path+action)
     video_list = os.listdir(video_path+action)
-    idx=0
     for video in video_list:
         prefix = video.split('.')[0]
         if not os.path.exists(save_path+action+'/'+prefix):
-            pass
-            #os.mkdir(save_path+action+'/'+prefix)
+            os.mkdir(save_path+action+'/'+prefix)
         save_name = save_path + action + '/' + prefix + '/'
         video_name = video_path+action+'/'+video
         cap = cv2.VideoCapture(video_name)
@@ -23,9 +22,12 @@ for action in action_list:
         for i in range(fps):
             ret, frame = cap.read()
             if ret:
-                cv2.imwrite(save_path+"/"+action+'/'+str(10000+idx)+'.jpg', frame)
-                #print(action+'/'+str(10000+idx)+'.jpg')
+                #cv2.imwrite(save_name+str(10000+fps_count)+'.jpg',frame)
                 fps_count += 1
-                idx+=1
-                if idx %100 ==0:
-                    print(action+'/'+str(10000+idx)+'.jpg')
+
+        print("total fps_count is ",fps_count)
+        for i in range(fps_count % 16) :
+            print(fps_count-i," ", end="")
+
+        print("\n")
+        #print(fps_count)
