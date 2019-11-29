@@ -5,7 +5,7 @@ from queue import Queue
 def creator(data, q):
     print("Createing data and putting it on the queue")
     print("\n")
-    f = face_detect()
+    #f = face_detect()
     for item in data:
         evt = threading.Event()
         q.put((item, evt))
