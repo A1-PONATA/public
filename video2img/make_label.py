@@ -1,6 +1,6 @@
 import os
 
-img_path = '/home/pirl/img3/'
+img_path = '/home/pirl/Documents/splited_action_data/'
 f1 = open('trainlist.txt','r')
 f2 = open('testlist.txt','r')
 

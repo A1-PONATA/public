@@ -2,7 +2,7 @@ import cv2
 import os
 
 video_path = '/home/pirl/Documents/action_data/'
-save_path = '/home/pirl/Documents/splited_action_data/'
+save_path = '/home/pirl/Documents/splited_action_data2/'
 
 action_list = os.listdir(video_path)
 

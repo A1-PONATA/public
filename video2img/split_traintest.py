@@ -1,8 +1,8 @@
 # Train:Test = 800:200 으로 랜덤분할
 import random
-fp = open("FastPass.txt",'r')
-r2l=open('Right2Left.txt',"r")
-l2r = open('Left2Right.txt','r')
+fp = open("/home/pirl/Documents/splited_action_data/fastpass/FastPass.txt",'r')
+r2l=open('/home/pirl/Documents/splited_action_data/right2left/Right2Left.txt',"r")
+l2r = open('/home/pirl/Documents/splited_action_data/left2right/Left2Right.txt','r')
 
 print(fp)
 
