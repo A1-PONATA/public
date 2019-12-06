@@ -27,5 +27,5 @@ for d in list:
     #     idx+=1
 
 
-    inDirectory = os.listdir(home + "/" + d)
+    inDirectory = os.listdir(home + "/" + d)10
     #print(inDirectory)
