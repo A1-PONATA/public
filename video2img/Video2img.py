@@ -19,7 +19,7 @@ for action in action_list:
         cap = cv2.VideoCapture(video_name)
         fps = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
         fps_count = 0
-        for i in range(fps):
+        for i in range(0,fps,3):
             ret, frame = cap.read()
             if ret:
                 #cv2.imwrite(save_name+str(10000+fps_count)+'.jpg',frame)
