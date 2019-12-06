@@ -1,14 +1,11 @@
 import threading
-import webcam_conn
 import face_detect
-import simple_camera
 from queue import Queue
 
 def creator(data, q):
     print("Createing data and putting it on the queue")
     print("\n")
-    #face_detect.faceDetect()
-    simple_camera.show_camera()
+    f = face_detect()
     for item in data:
         evt = threading.Event()
         q.put((item, evt))
@@ -16,7 +13,6 @@ def creator(data, q):
         evt.wait()
 
 def consumer(q):
-    webcam_conn.human_detect()
     while True:
         data, evt = q.get()
         print('~')
